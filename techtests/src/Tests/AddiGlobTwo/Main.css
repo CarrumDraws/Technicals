@@ -1,0 +1,26 @@
+/* Header */
+.header_flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: #555555;
+}
+
+/* Body */
+.body_flexbox_status {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: #c17979;
+}
+.body_flexbox_promo {
+  display: flex;
+  flex-direction: column;
+}
+/* Article */
