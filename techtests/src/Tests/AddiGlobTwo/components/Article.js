@@ -9,13 +9,16 @@ function Article({ promo }) {
     joinNowButtonText,
   } = promo;
   return (
-    <article>
-      {name}
+    <article className="article_flexbox">
+      <div className="article_name">{name}</div>
+
       <img src={heroImageUrl} alt="Promo Hero"></img>
-      {description}
-      <br />
-      <button>{termsAndConditionsButtonText}</button>
-      <button>{joinNowButtonText}</button>
+      <div className="article_description">{description}</div>
+
+      <div className="article_flexbox-buttons">
+        <button>{termsAndConditionsButtonText}</button>
+        <button>{joinNowButtonText}</button>
+      </div>
     </article>
   );
 }

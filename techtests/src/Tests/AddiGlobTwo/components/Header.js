@@ -22,14 +22,19 @@ function Header() {
 
   return (
     <header className="header_flexbox">
-      <button onClick={() => trigMenu()}> HamMenu </button>
-      [LOGO HERE]
-      {/* <object type="image/svg+xml" data={LogoSVG} className="logo">
+      <div className="header_flexbox-left">
+        <button onClick={() => trigMenu()}> HamMenu </button>
+      </div>
+
+      <object type="image/svg+xml" data={LogoSVG} className="header_logo">
         Logo
-      </object> */}
-      <button onClick={() => setTheme("dark")}> Dark Mode </button>
-      <button onClick={() => newUser("Calum")}> New User </button>
-      <button onClick={() => setUser("Calum")}> Sign In </button>
+      </object>
+
+      <div className="header_flexbox-right">
+        <button onClick={() => setTheme("dark")}> Dark Mode </button>
+        <button onClick={() => newUser("Calum")}> New User </button>
+        <button onClick={() => setUser("Calum")}> Sign In </button>
+      </div>
     </header>
   );
 }

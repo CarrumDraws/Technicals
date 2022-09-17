@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { PromoProvider } from "./context/PromoContext";
 import Header from "./components/Header";
+import PromoToggle from "./components/PromoToggle";
 import Body from "./components/Body";
 import "./Main.css";
 
@@ -45,7 +46,8 @@ function Main() {
   return (
     <PromoProvider>
       <Header />
-      <Body currPromos={currPromos} toggleStatus={toggleStatus} />
+      <PromoToggle toggleStatus={toggleStatus} />
+      <Body currPromos={currPromos} />
     </PromoProvider>
   );
 }
