@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import LogoSVG from "../assets/AG01.svg";
+import LogoSVG from "../assets/AG_02.svg";
 import { Context } from "../context/PromoContext";
 
 function Header() {
