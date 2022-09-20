@@ -8,6 +8,11 @@ function Article({ promo }) {
     termsAndConditionsButtonText,
     joinNowButtonText,
   } = promo;
+
+  function clicked(str) {
+    console.log("Clicked " + str);
+  }
+
   return (
     <article className="article_flexbox">
       <div className="article_name">{name}</div>
@@ -15,9 +20,13 @@ function Article({ promo }) {
       <img src={heroImageUrl} alt="Promo Hero"></img>
       <div className="article_description">{description}</div>
 
-      <div className="article_flexbox-buttons">
-        <button>{termsAndConditionsButtonText}</button>
-        <button>{joinNowButtonText}</button>
+      <div className="article_flexbox_buttons">
+        <button className="article_toc" onClick={() => clicked("toc")}>
+          {termsAndConditionsButtonText}
+        </button>
+        <button className="article_join" onClick={() => clicked("join")}>
+          {joinNowButtonText}
+        </button>
       </div>
     </article>
   );
