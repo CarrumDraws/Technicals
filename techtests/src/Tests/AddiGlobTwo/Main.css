@@ -5,12 +5,17 @@
   --head-fade: rgb(51, 158, 182, 0);
   --head-text: #ffffff;
 
+  --side: rgb(8, 54, 64);
+  --side-light: rgb(51, 158, 182, 1);
+
   --togg: #000000;
   --togg-text: #000000;
 
   --body: rgb(211, 197, 186);
   --body-card: rgb(236, 227, 220);
   --body-text: #000000;
+
+  --menu_trans: all 0.7s ease-in-out;
 
   font-family: sofia-pro, sans-serif;
   font-weight: 400;
@@ -52,7 +57,7 @@
   height: 0.15rem;
   border-radius: 1rem;
   background: #ffffff;
-  transition: all 0.7s ease-in-out;
+  transition: var(--menu_trans);
 }
 .menu_btn_burger::before,
 .menu_btn_burger::after {
@@ -62,7 +67,7 @@
   border-radius: 1rem;
   height: 0.15rem;
   background: #ffffff;
-  transition: all 0.7s ease-in-out;
+  transition: var(--menu_trans);
 }
 .menu_btn_burger::before {
   transform: translateY(-0.4rem);
@@ -84,6 +89,9 @@
 
 .header_logo {
   height: 70%;
+}
+.header_logo g {
+  fill: #ffffff;
 }
 .header_flexbox-right {
   width: calc(50% - 3rem);
@@ -111,6 +119,81 @@
   border: 0.1rem solid var(--head-text);
 }
 
+/* Side Bar */
+.side_main {
+  height: 125%;
+  width: 100%;
+
+  z-index: 5;
+  position: absolute;
+  background-color: var(--side);
+
+  /* How to make this originate from the menubar? */
+  clip-path: circle(0% at 0 0);
+  transition: var(--menu_trans);
+}
+
+.side_main.open {
+  clip-path: circle(120% at 0 0);
+}
+
+.side_header_flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  background-color: var(--side);
+  height: 3rem;
+
+  /* Prevent Text Wrap */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.side_btn_burger {
+  width: 1.5rem;
+  height: 0.15rem;
+  border-radius: 1rem;
+  background: var(--side-light);
+  transition: var(--menu_trans);
+}
+.side_btn_burger::before,
+.side_btn_burger::after {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  border-radius: 1rem;
+  height: 0.15rem;
+  background: var(--side-light);
+  transition: var(--menu_trans);
+}
+.side_btn_burger::before {
+  transform: translateY(-0.4rem);
+}
+.side_btn_burger::after {
+  transform: translateY(0.4rem);
+}
+.side_btn_burger.open {
+  transform: rotate(90deg);
+  background: transparent;
+}
+.side_btn_burger.open::before {
+  transform: rotate(45deg);
+}
+.side_btn_burger.open::after {
+  transform: rotate(-45deg);
+}
+
+.side_header_logo {
+  height: 70%;
+}
+.side_header_logo g {
+  fill: var(--side-light);
+}
+
 /* PromoToggle */
 .toggle_sticky {
   height: 2rem;
@@ -120,6 +203,7 @@
   position: sticky;
 
   display: flex;
+  z-index: 3;
   flex-direction: column;
   align-items: center;
 }
@@ -134,11 +218,11 @@
 }
 
 .toggle_grad {
-  height: 2rem;
+  height: 1rem;
   width: 100%;
 
   position: absolute;
-  transform: translate(0%, 100%);
+  transform: translate(0%, 200%);
   background-image: linear-gradient(
     180deg,
     var(--head) 0%,

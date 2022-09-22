@@ -1,22 +1,27 @@
-import React, { useContext, useState, useRef, useEffect } from "react";
-import LogoSVG from "../assets/AG_02.svg";
+import React, { useContext, useRef, useEffect } from "react";
+import { ReactComponent as LogoSVG } from "../assets/AG_02.svg";
 import { Context } from "../context/PromoContext";
 
-function Header() {
+function Header({ menuState, toggleMenu }) {
   const { theme, user, changeTheme, changeUser } = useContext(Context);
-  const [menuUp, setMenuUp] = useState(false);
   const hamRef = useRef(null);
 
   function trigMenu() {
-    console.log("Hamburger Menu Triggered");
-    if (!menuUp) {
+    if (!menuState) {
       hamRef.current.classList.add("open");
-      setMenuUp(true);
-    } else {
-      hamRef.current.classList.remove("open");
-      setMenuUp(false);
+      toggleMenu(true);
     }
   }
+  function trigMenuClose(a) {
+    if (!a) {
+      hamRef.current.classList.remove("open");
+    }
+  }
+
+  useEffect(() => {
+    trigMenuClose(menuState);
+  }, [menuState]);
+
   function newUser(newUser) {
     console.log("New User");
   }
@@ -37,9 +42,10 @@ function Header() {
         </div>
       </div>
 
-      <object type="image/svg+xml" data={LogoSVG} className="header_logo">
+      <LogoSVG className="header_logo" />
+      {/* <object type="image/svg+xml" data={LogoSVG} className="header_logo">
         Logo
-      </object>
+      </object> */}
 
       <div className="header_flexbox-right">
         {/* <button onClick={() => setTheme("dark")}> Dark Mode </button> */}

@@ -3,12 +3,14 @@ import { PromoProvider } from "./context/PromoContext";
 import Header from "./components/Header";
 import PromoToggle from "./components/PromoToggle";
 import Body from "./components/Body";
+import SideMenu from "./components/SideMenu";
 import "./Main.css";
 
 function Main() {
   const [promos, setPromos] = useState([]); // Full List
   const [currPromos, setCurrPromos] = useState([]); // Only New Stuff
   const [status, setStatus] = useState(true); // Dataset to Display
+  const [menuUp, setMenuUp] = useState(false); // Menu Display
 
   // Fetch Data from http://www.mocky.io/v2/5bc3b9cc30000012007586b7
   useEffect(() => {
@@ -32,6 +34,10 @@ function Main() {
     getData();
   }, []);
 
+  function toggleMenu(menuState) {
+    setMenuUp(menuState);
+  }
+
   // Toggle between the two promo states
   function toggleStatus(newStatus) {
     console.log(`New Status is ${newStatus}`);
@@ -45,7 +51,8 @@ function Main() {
 
   return (
     <PromoProvider>
-      <Header />
+      <SideMenu menuState={menuUp} toggleMenu={toggleMenu} />
+      <Header menuState={menuUp} toggleMenu={toggleMenu} />
       <PromoToggle toggleStatus={toggleStatus} />
       <Body currPromos={currPromos} />
     </PromoProvider>
