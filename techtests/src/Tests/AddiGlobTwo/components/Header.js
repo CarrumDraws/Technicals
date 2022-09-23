@@ -22,9 +22,6 @@ function Header({ menuState, toggleMenu }) {
     trigMenuClose(menuState);
   }, [menuState]);
 
-  function newUser(newUser) {
-    console.log("New User");
-  }
   function setUser(newUser) {
     console.log("Changing User");
     changeUser(newUser);
@@ -43,14 +40,10 @@ function Header({ menuState, toggleMenu }) {
       </div>
 
       <LogoSVG className="header_logo" />
-      {/* <object type="image/svg+xml" data={LogoSVG} className="header_logo">
-        Logo
-      </object> */}
 
       <div className="header_flexbox-right">
-        {/* <button onClick={() => setTheme("dark")}> Dark Mode </button> */}
-        <button className="header_newuser" onClick={() => newUser("Calum")}>
-          Night
+        <button className="header_night" onClick={() => setTheme("night")}>
+          N
         </button>
         <button className="header_signin" onClick={() => setUser("Calum")}>
           Sign In

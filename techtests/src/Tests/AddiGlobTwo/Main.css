@@ -1,25 +1,23 @@
 /* Root */
 :root {
-  --head: rgb(51, 158, 182, 1);
-  --head-dark: rgb(15, 91, 109);
-  --head-fade: rgb(51, 158, 182, 0);
-  --head-text: #ffffff;
+  --primary: rgb(69, 160, 209);
+  --primary-fade: rgb(69, 160, 209, 0);
+  --primary-text: rgba(255, 255, 255);
 
-  --side: rgb(8, 54, 64);
-  --side-light: rgb(51, 158, 182, 1);
+  --secondary: rgb(8, 54, 64);
 
-  --togg: #000000;
-  --togg-text: #000000;
+  --body: rgb(69, 209, 202);
+  --body-card: rgb(188, 240, 237);
 
-  --body: rgb(211, 197, 186);
-  --body-card: rgb(236, 227, 220);
-  --body-text: #000000;
-
-  --menu_trans: all 0.7s ease-in-out;
+  --menu_trans: all 3s ease-in-out;
+  --butt_trans: all 0.5s ease-in-out;
+  --text_trans: all 0.2s ease-in-out;
 
   font-family: sofia-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
+
+  background-color: var(--body);
 }
 
 /* Header */
@@ -31,7 +29,7 @@
   align-items: center;
   align-content: center;
 
-  background-color: var(--head);
+  background-color: var(--primary);
   height: 3rem;
 
   /* Prevent Text Wrap */
@@ -106,27 +104,39 @@
   text-align: center;
   border-radius: 1rem;
 
+  line-height: 1rem;
   font-family: inherit;
 }
-.header_newuser {
-  background-color: var(--head-text);
-  color: var(--head);
+.header_night {
+  background-color: var(--primary-text);
+  color: var(--primary);
   border: none;
 }
 .header_signin {
-  background-color: var(--head);
-  color: var(--head-text);
-  border: 0.1rem solid var(--head-text);
+  background-color: var(--primary);
+  color: var(--primary-text);
+  border: 0.1rem solid var(--primary-text);
+
+  transition: var(--butt_trans);
+}
+.header_signin_text {
+  transition: var(--text_trans);
+}
+.header_signin:hover {
+  background-color: var(--primary-text);
+  color: var(--primary);
 }
 
 /* Side Bar */
 .side_main {
   height: 125%;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 
   z-index: 5;
   position: absolute;
-  background-color: var(--side);
+  background-color: var(--secondary);
 
   /* How to make this originate from the menubar? */
   clip-path: circle(0% at 0 0);
@@ -145,7 +155,7 @@
   align-items: center;
   align-content: center;
 
-  background-color: var(--side);
+  background-color: var(--secondary);
   height: 3rem;
 
   /* Prevent Text Wrap */
@@ -157,7 +167,7 @@
   width: 1.5rem;
   height: 0.15rem;
   border-radius: 1rem;
-  background: var(--side-light);
+  background: var(--body);
   transition: var(--menu_trans);
 }
 .side_btn_burger::before,
@@ -167,7 +177,7 @@
   width: 1.5rem;
   border-radius: 1rem;
   height: 0.15rem;
-  background: var(--side-light);
+  background: var(--body);
   transition: var(--menu_trans);
 }
 .side_btn_burger::before {
@@ -191,7 +201,7 @@
   height: 70%;
 }
 .side_header_logo g {
-  fill: var(--side-light);
+  fill: var(--body);
 }
 
 /* PromoToggle */
@@ -214,7 +224,15 @@
   display: flex;
   justify-content: space-evenly;
 
-  background-color: var(--head);
+  color: var(--secondary);
+  background-color: var(--primary);
+}
+.toggle_flexbox_status a {
+  margin-top: auto;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .toggle_grad {
@@ -225,8 +243,8 @@
   transform: translate(0%, 200%);
   background-image: linear-gradient(
     180deg,
-    var(--head) 0%,
-    var(--head-fade) 100%
+    var(--primary) 0%,
+    var(--primary-fade) 100%
   );
 }
 /* Body */
@@ -248,16 +266,13 @@
   align-items: center;
   align-content: center;
 
-  /* padding-top: 1rem; */
   margin-top: 2rem;
   padding-bottom: 1rem;
   width: 100%;
 
-  /* border-style: solid; */
-  filter: drop-shadow(0rem 0rem 0.5rem var(--head-dark));
   border-radius: 1rem;
   background-color: var(--body-card);
-  color: var(--head-dark);
+  color: var(--secondary);
 }
 
 .article_name {
@@ -290,15 +305,16 @@
   text-align: center;
   border-radius: 1rem;
 
+  line-height: 1rem;
   font-family: inherit;
 }
 .article_toc {
   background-color: var(--body-card);
-  color: var(--head-dark);
-  border: 0.1rem solid var(--head-dark);
+  color: var(--secondary);
+  border: 0.1rem solid var(--secondary);
 }
 .article_join {
-  background-color: var(--head-dark);
+  background-color: var(--secondary);
   color: var(--body-card);
   border: none;
 }
