@@ -9,7 +9,7 @@ import "./Main.css";
 function Main() {
   const [promos, setPromos] = useState([]); // Full List
   const [currPromos, setCurrPromos] = useState([]); // Only New Stuff
-  const [status, setStatus] = useState(true); // Dataset to Display
+  const [status, setStatus] = useState("all"); // Dataset to Display
   const [menuUp, setMenuUp] = useState(false); // Menu Display
 
   // Fetch Data from http://www.mocky.io/v2/5bc3b9cc30000012007586b7
@@ -46,14 +46,14 @@ function Main() {
     } else {
       setCurrPromos(promos);
     }
-    setStatus(!status);
+    setStatus(newStatus);
   }
 
   return (
     <PromoProvider>
       <SideMenu menuState={menuUp} toggleMenu={toggleMenu} />
       <Header menuState={menuUp} toggleMenu={toggleMenu} />
-      <PromoToggle toggleStatus={toggleStatus} />
+      <PromoToggle status={status} toggleStatus={toggleStatus} />
       <Body currPromos={currPromos} />
     </PromoProvider>
   );

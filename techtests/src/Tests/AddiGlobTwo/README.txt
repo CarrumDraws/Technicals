@@ -12,17 +12,17 @@ SVG's:
 - Add to DOM as a Node, add a className
 - Control with CSS by doing .className g { fill: #fff }
 
+
+
 X. Add Sizing Breakpoints
 Xx. Add Dark/Light Mode
-Xxx. Remove White BKRD from SVG + Color Animation
 XX. Reduce Header Buttons when too small
-XXX. Make Rounded "Cards" for each promo?
-XXXX. Implement sidebar when hamburger clicked
+
 
 Questions: Do i have to do soemthing with webkit?
 
 Things to try next time:
+- How to name colors?
 - CSS Modules
 - SCSS: Has Math Functions
-- How to name CSS colors?
 - Figma
