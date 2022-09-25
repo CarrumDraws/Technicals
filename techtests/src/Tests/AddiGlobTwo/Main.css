@@ -2,22 +2,24 @@
 :root {
   --primary: rgb(69, 160, 209);
   --primary-fade: rgb(69, 160, 209, 0);
-  --primary-text: rgba(255, 255, 255);
+  --primary-text: rgb(255, 255, 255);
 
   --secondary: rgb(8, 54, 64);
 
   --body: rgb(69, 209, 202);
   --body-card: rgb(188, 240, 237);
 
-  --menu_trans: all 3s ease-in-out;
+  --menu_trans: all 1s ease-in-out;
+  --text_trans: all 0.2s ease-in-out;
   --butt_trans: all 0.5s ease-in-out;
   --butt_time: 0.5s;
   --butt_ease: ease-in-out;
-  --text_trans: all 0.2s ease-in-out;
 
   font-family: sofia-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
+
+  background-color: var(--body);
 }
 
 /* Header */
@@ -55,8 +57,8 @@
   width: 1.5rem;
   height: 0.15rem;
   border-radius: 1rem;
-  background: #ffffff;
-  transition: var(--menu_trans);
+  background: var(--primary-text);
+  transition: var(--butt_trans);
 }
 .menu_btn_burger::before,
 .menu_btn_burger::after {
@@ -65,8 +67,8 @@
   width: 1.5rem;
   border-radius: 1rem;
   height: 0.15rem;
-  background: #ffffff;
-  transition: var(--menu_trans);
+  background-color: var(--primary-text);
+  transition: var(--butt_trans);
 }
 .menu_btn_burger::before {
   transform: translateY(-0.4rem);
@@ -90,7 +92,7 @@
   height: 70%;
 }
 .header_logo g {
-  fill: #ffffff;
+  fill: var(--primary-text);
 }
 .header_flexbox-right {
   width: calc(50% - 3rem);
@@ -164,7 +166,7 @@
   height: 0.15rem;
   border-radius: 1rem;
   background: var(--body);
-  transition: var(--menu_trans);
+  transition: var(--butt_trans);
 }
 .side_btn_burger::before,
 .side_btn_burger::after {
@@ -174,7 +176,7 @@
   border-radius: 1rem;
   height: 0.15rem;
   background: var(--body);
-  transition: var(--menu_trans);
+  transition: var(--butt_trans);
 }
 .side_btn_burger::before {
   transform: translateY(-0.4rem);
@@ -238,6 +240,7 @@
 
   position: absolute;
   transform: translate(0%, 200%);
+  transition: var(--butt_trans);
   background-image: linear-gradient(
     180deg,
     var(--primary) 0%,
@@ -271,6 +274,7 @@
   border-radius: 1rem;
   background-color: var(--body-card);
   color: var(--secondary);
+  transition: var(--butt_trans);
 }
 
 .article_name {
@@ -308,10 +312,13 @@
 }
 .article_toc {
   background-color: var(--body-card);
+  color: var(--secondary);
   border: 0.1rem solid var(--secondary);
+  transition: var(--butt_trans);
 }
 .article_join {
   background-color: var(--secondary);
   color: var(--body-card);
+  transition: var(--butt_trans);
   border: none;
 }
