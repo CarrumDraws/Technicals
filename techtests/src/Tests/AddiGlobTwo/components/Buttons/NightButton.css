@@ -1,0 +1,351 @@
+.noani {
+  animation-duration: 0s !important;
+}
+.nightbutton {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+}
+.circle {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: var(--butt_trans);
+
+  border-radius: 50%;
+  background-color: var(--primary);
+
+  box-shadow: inset 1rem -1rem 0rem 0.1rem var(--primary-text);
+
+  animation: circleopen var(--butt_time) var(--butt_ease) forwards;
+}
+.nightbutton.close > .circle {
+  animation: circleclose var(--butt_time) var(--butt_ease) forwards;
+}
+@keyframes circleopen {
+  0% {
+    height: 1.5rem;
+    width: 1.5rem;
+    box-shadow: inset 0.5rem -0.5rem 0rem 0.1rem var(--primary-text);
+  }
+  50% {
+    height: 1rem;
+    width: 1rem;
+    box-shadow: inset 1rem -1rem 0rem 0.1rem var(--primary-text);
+  }
+}
+@keyframes circleclose {
+  50% {
+    height: 1rem;
+    width: 1rem;
+    box-shadow: inset 1rem -1rem 0rem 0.1rem var(--primary-text);
+  }
+  100% {
+    height: 1.5rem;
+    width: 1.5rem;
+    box-shadow: inset 0.5rem -0.5rem 0rem 0.1rem var(--primary-text);
+  }
+}
+
+.ray {
+  position: absolute;
+  height: 0.3rem;
+  width: 0.3rem;
+  left: 50%;
+
+  transform-origin: center 1rem;
+  border-radius: 1rem;
+  background-color: var(--primary-text);
+}
+
+.ray:nth-of-type(8n-8) {
+  transform: translate(-0.15rem, 0rem) rotate(0deg);
+  animation: oneopen var(--butt_time) var(--butt_ease) forwards;
+}
+.nightbutton.close > .ray:nth-of-type(8n-8) {
+  animation: oneclose var(--butt_time) var(--butt_ease) forwards;
+}
+@keyframes oneopen {
+  0% {
+    transform: translate(-0.15rem, 0.5rem) rotate(0deg);
+    visibility: hidden;
+  }
+  75% {
+    transform: translate(-0.15rem, 0.5rem) rotate(0deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-0.15rem, 0rem) rotate(0deg);
+  }
+}
+@keyframes oneclose {
+  0% {
+    transform: translate(-0.15rem, 0rem) rotate(0deg);
+  }
+  25% {
+    transform: translate(-0.15rem, 0.5rem) rotate(0deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-0.15rem, 0.5rem) rotate(0deg);
+    visibility: hidden;
+  }
+}
+.ray:nth-of-type(8n-7) {
+  transform: translate(-0.15rem, 0rem) rotate(45deg);
+  animation: twoopen var(--butt_time) var(--butt_ease) forwards;
+}
+.nightbutton.close > .ray:nth-of-type(8n-7) {
+  animation: twoclose var(--butt_time) var(--butt_ease) forwards;
+}
+@keyframes twoopen {
+  0% {
+    transform: translate(-0.5rem, 0.35rem) rotate(45deg);
+    visibility: hidden;
+  }
+  72% {
+    transform: translate(-0.5rem, 0.35rem) rotate(45deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-0.15rem, 0rem) rotate(45deg);
+  }
+}
+@keyframes twoclose {
+  0% {
+    transform: translate(-0.15rem, 0rem) rotate(45deg);
+  }
+  3% {
+    transform: translate(-0.15rem, 0rem) rotate(45deg);
+  }
+  28% {
+    transform: translate(-0.5rem, 0.35rem) rotate(45deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-0.5rem, 0.35rem) rotate(45deg);
+    visibility: hidden;
+  }
+}
+
+.ray:nth-of-type(8n-6) {
+  animation: threeopen var(--butt_time) var(--butt_ease) forwards;
+}
+.nightbutton.close > .ray:nth-of-type(8n-6) {
+  animation: threeclose var(--butt_time) var(--butt_ease) forwards;
+}
+@keyframes threeopen {
+  0% {
+    transform: translate(-0.65rem, 0rem) rotate(90deg);
+    visibility: hidden;
+  }
+  69% {
+    transform: translate(-0.65rem, 0rem) rotate(90deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-0.15rem, 0rem) rotate(90deg);
+  }
+}
+@keyframes threeclose {
+  0% {
+    transform: translate(-0.15rem, 0rem) rotate(90deg);
+  }
+  6% {
+    transform: translate(-0.15rem, 0rem) rotate(90deg);
+  }
+  31% {
+    transform: translate(-0.65rem, 0rem) rotate(90deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-0.65rem, 0rem) rotate(90deg);
+    visibility: hidden;
+  }
+}
+
+.ray:nth-of-type(8n-5) {
+  transform: translate(-0.15rem, 0rem) rotate(135deg);
+  animation: fouropen var(--butt_time) var(--butt_ease) forwards;
+}
+.nightbutton.close > .ray:nth-of-type(8n-5) {
+  animation: fourclose var(--butt_time) var(--butt_ease) forwards;
+}
+@keyframes fouropen {
+  0% {
+    transform: translate(-0.5rem, -0.35rem) rotate(135deg);
+    visibility: hidden;
+  }
+  66% {
+    transform: translate(-0.5rem, -0.35rem) rotate(135deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-0.15rem, 0rem) rotate(135deg);
+  }
+}
+@keyframes fourclose {
+  0% {
+    transform: translate(-0.15rem, 0rem) rotate(135deg);
+  }
+  9% {
+    transform: translate(-0.15rem, 0rem) rotate(135deg);
+  }
+  34% {
+    transform: translate(-0.5rem, -0.35rem) rotate(135deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-0.5rem, -0.35rem) rotate(135deg);
+    visibility: hidden;
+  }
+}
+.ray:nth-of-type(8n-4) {
+  transform: translate(-0.15rem, 0rem) rotate(180deg);
+  animation: fiveopen var(--butt_time) var(--butt_ease) forwards;
+}
+.nightbutton.close > .ray:nth-of-type(8n-4) {
+  animation: fiveclose var(--butt_time) var(--butt_ease) forwards;
+}
+@keyframes fiveopen {
+  0% {
+    transform: translate(-0.15rem, -0.5rem) rotate(180deg);
+    visibility: hidden;
+  }
+  63% {
+    transform: translate(-0.15rem, -0.5rem) rotate(180deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-0.15rem, 0rem) rotate(180deg);
+  }
+}
+@keyframes fiveclose {
+  0% {
+    transform: translate(-0.15rem, 0rem) rotate(180deg);
+  }
+  12% {
+    transform: translate(-0.15rem, 0rem) rotate(180deg);
+  }
+  37% {
+    transform: translate(-0.15rem, -0.5rem) rotate(180deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-0.15rem, -0.5rem) rotate(180deg);
+    visibility: hidden;
+  }
+}
+.ray:nth-of-type(8n-3) {
+  transform: translate(-0.15rem, 0rem) rotate(225deg);
+  animation: sixopen var(--butt_time) var(--butt_ease) forwards;
+}
+.nightbutton.close > .ray:nth-of-type(8n-3) {
+  animation: sixclose var(--butt_time) var(--butt_ease) forwards;
+}
+@keyframes sixopen {
+  0% {
+    transform: translate(0.2rem, -0.35rem) rotate(225deg);
+    visibility: hidden;
+  }
+  60% {
+    transform: translate(0.2rem, -0.35rem) rotate(225deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-0.15rem, 0rem) rotate(225deg);
+  }
+}
+@keyframes sixclose {
+  0% {
+    transform: translate(-0.15rem, 0rem) rotate(225deg);
+  }
+  15% {
+    transform: translate(-0.15rem, 0rem) rotate(225deg);
+  }
+  40% {
+    transform: translate(0.2rem, -0.35rem) rotate(225deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(0.2rem, -0.35rem) rotate(225deg);
+    visibility: hidden;
+  }
+}
+.ray:nth-of-type(8n-2) {
+  transform: translate(-0.15rem, 0rem) rotate(270deg);
+  animation: sevenopen var(--butt_time) var(--butt_ease) forwards;
+}
+.nightbutton.close > .ray:nth-of-type(8n-2) {
+  animation: sevenclose var(--butt_time) var(--butt_ease) forwards;
+}
+@keyframes sevenopen {
+  0% {
+    transform: translate(0.35rem, 0rem) rotate(270deg);
+    visibility: hidden;
+  }
+  57% {
+    transform: translate(0.35rem, 0rem) rotate(270deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-0.15rem, 0rem) rotate(270deg);
+  }
+}
+@keyframes sevenclose {
+  0% {
+    transform: translate(-0.15rem, 0rem) rotate(270deg);
+  }
+  18% {
+    transform: translate(-0.15rem, 0rem) rotate(270deg);
+  }
+  43% {
+    transform: translate(0.35rem, 0rem) rotate(270deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(0.35rem, 0rem) rotate(270deg);
+    visibility: hidden;
+  }
+}
+.ray:nth-of-type(8n-1) {
+  transform: translate(-0.15rem, 0rem) rotate(315deg);
+  animation: eightopen var(--butt_time) var(--butt_ease) forwards;
+}
+.nightbutton.close > .ray:nth-of-type(8n-1) {
+  transform: translate(0.2rem, 0.35rem) rotate(315deg);
+  animation: eightclose var(--butt_time) var(--butt_ease) forwards;
+}
+@keyframes eightopen {
+  0% {
+    transform: translate(0.2rem, 0.35rem) rotate(315deg);
+    visibility: hidden;
+  }
+  54% {
+    transform: translate(0.2rem, 0.35rem) rotate(315deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-0.15rem, 0rem) rotate(315deg);
+  }
+}
+@keyframes eightclose {
+  0% {
+    transform: translate(-0.15rem, 0rem) rotate(315deg);
+  }
+  21% {
+    transform: translate(-0.15rem, 0rem) rotate(315deg);
+  }
+  46% {
+    transform: translate(0.2rem, 0.35rem) rotate(315deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(0.2rem, 0.35rem) rotate(315deg);
+    visibility: hidden;
+  }
+}
