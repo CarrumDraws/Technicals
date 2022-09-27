@@ -9,6 +9,9 @@
   --body: rgb(69, 209, 202);
   --body-card: rgb(188, 240, 237);
 
+  --menu: rgb(8, 54, 64);
+  --menu-text: rgb(69, 209, 202);
+
   --menu_trans: all 1s ease-in-out;
   --text_trans: all 0.2s ease-in-out;
   --butt_trans: all 0.5s ease-in-out;
@@ -135,7 +138,7 @@
 
   z-index: 5;
   position: absolute;
-  background-color: var(--secondary);
+  background-color: var(--menu);
 
   /* How to make this originate from the menubar? */
   clip-path: circle(0% at 0 0);
@@ -165,7 +168,7 @@
   width: 1.5rem;
   height: 0.15rem;
   border-radius: 1rem;
-  background: var(--body);
+  background-color: var(--menu-text);
   transition: var(--butt_trans);
 }
 .side_btn_burger::before,
@@ -175,7 +178,7 @@
   width: 1.5rem;
   border-radius: 1rem;
   height: 0.15rem;
-  background: var(--body);
+  background-color: var(--menu-text);
   transition: var(--butt_trans);
 }
 .side_btn_burger::before {
@@ -199,7 +202,7 @@
   height: 70%;
 }
 .side_header_logo g {
-  fill: var(--body);
+  fill: var(--menu-text);
 }
 
 /* PromoToggle */

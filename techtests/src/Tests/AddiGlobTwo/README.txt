@@ -18,9 +18,7 @@ Forwards/Backwards Animation:
 1. You need two seperate animations for forwards AND backwards. Play these animations depending on your needs.
 2. For initial page load, set a classname to be 'animation-time: 0 !important,' and apply it to the animation until a button is triggered.
 
-X. Add Sizing Breakpoints
-Xx. Add Dark/Light Mode
-XX. Reduce Header Buttons when too small
+--
 
 
 Questions: Do i have to do soemthing with webkit?
