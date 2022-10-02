@@ -1,3 +1,10 @@
+Things my UI has:
+- Has Darkmode switch that animates
+- Scales to any device
+- Has Hambruger menu that animates
+- Toggles between promotion types
+- Has hover animations for buttons
+
 Idea behind Hamburger Menu:
 - Create a flexbox containing one 'bar'
 - use ::before and ::after to create two more identical bars
@@ -27,24 +34,4 @@ Things to try next time:
 - How to name colors?
 - CSS Modules
 - SCSS: Has Math Functions
-- Figma
-
-45-16=29
-16/8=2
-0-29 / 71
-2-31 / 69
-4-33 / 67
-6-35 / 65
-8-37 / 63
-10-39 / 61
-12-41 / 59
-14-43 / 57
-
-0-25 / 75
-3-28 / 72
-6-31 / 69
-9-34 / 66
-12-37 / 63
-15-40 / 60
-18-43 / 57
-21-46 / 54
+- Use Figma

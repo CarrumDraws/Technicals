@@ -254,6 +254,7 @@
 .body_flexbox_promo {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
 
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -294,6 +295,8 @@
 .article_description {
   margin-top: 1rem;
   text-align: center;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 .article_flexbox_buttons {
   margin-top: 1rem;
@@ -324,4 +327,42 @@
   color: var(--body-card);
   transition: var(--butt_trans);
   border: none;
+}
+
+@media (min-aspect-ratio: 1/1) {
+  /* .header_flexbox {
+    background-color: red;
+  } */
+  /* Body */
+  .body_flexbox_promo {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  /* Article */
+  .article_flexbox {
+    width: 47%;
+  }
+}
+
+@media (min-aspect-ratio: 7/4) {
+  /* .header_flexbox {
+    background-color: orange;
+  } */
+
+  /* Article */
+  .article_flexbox {
+    width: 31%;
+  }
+}
+
+@media (min-aspect-ratio: 2/1) {
+  /* .header_flexbox {
+    background-color: yellow;
+  } */
+
+  /* Article */
+  .article_flexbox {
+    width: 24%;
+  }
 }
