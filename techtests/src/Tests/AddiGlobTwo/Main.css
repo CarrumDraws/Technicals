@@ -12,6 +12,8 @@
   --menu: rgb(8, 54, 64);
   --menu-text: rgb(69, 209, 202);
 
+  --skele: rgb(184, 221, 219);
+
   --menu_trans: all 1s ease-in-out;
   --text_trans: all 0.2s ease-in-out;
   --butt_trans: all 0.5s ease-in-out;
@@ -253,8 +255,9 @@
 /* Body */
 .body_flexbox_promo {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -309,7 +312,6 @@
 }
 .article_flexbox_buttons > button {
   padding: 0.25rem 0.75rem;
-  margin-left: 1rem;
   text-align: center;
   border-radius: 1rem;
 
@@ -323,9 +325,76 @@
   transition: var(--butt_trans);
 }
 .article_join {
+  margin-left: 1rem;
+
   background-color: var(--secondary);
   color: var(--body-card);
   transition: var(--butt_trans);
+  border: none;
+}
+
+/* Skeleton */
+.skele_article_flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  width: 100%;
+
+  transition: var(--butt_trans);
+  border-radius: 1rem;
+  border: 0.15rem solid var(--skele);
+}
+.skele_article_name {
+  align-self: flex-start;
+  height: 2rem;
+  width: 65%;
+  border-radius: 1rem;
+
+  margin: 0.3rem;
+
+  transition: var(--butt_trans);
+  background-color: var(--skele);
+}
+.skele_img {
+  width: 100%;
+  aspect-ratio: 2/1;
+
+  transition: var(--butt_trans);
+  background-color: var(--skele);
+}
+
+.skele_article_description {
+  margin-top: 0.75rem;
+  border-radius: 1rem;
+
+  transition: var(--butt_trans);
+  height: 1rem;
+  width: 90%;
+  background-color: var(--skele);
+}
+
+.skele_article_toc {
+  height: 1.5rem;
+  width: 30%;
+  border-radius: 1rem;
+
+  transition: var(--butt_trans);
+  background-color: var(--body);
+  border: 0.15rem solid var(--skele);
+}
+.skele_article_join {
+  height: 1.5rem;
+  width: 30%;
+  border-radius: 1rem;
+
+  transition: var(--butt_trans);
+  background-color: var(--skele);
+  border: 0.1rem solid var(--body-card);
   border: none;
 }
 
@@ -333,14 +402,14 @@
   /* .header_flexbox {
     background-color: red;
   } */
-  /* Body */
-  .body_flexbox_promo {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+
   /* Article */
   .article_flexbox {
+    width: 47%;
+  }
+
+  /* Skeleton */
+  .skele_article_flexbox {
     width: 47%;
   }
 }
@@ -351,7 +420,12 @@
   } */
 
   /* Article */
-  .article_flexbox {
+  .article_flexbox .skele_article_flexbox {
+    width: 31%;
+  }
+
+  /* Skeleton */
+  .skele_article_flexbox {
     width: 31%;
   }
 }
@@ -362,7 +436,12 @@
   } */
 
   /* Article */
-  .article_flexbox {
+  .article_flexbox .skele_article_flexbox {
+    width: 24%;
+  }
+
+  /* Skeleton */
+  .skele_article_flexbox {
     width: 24%;
   }
 }

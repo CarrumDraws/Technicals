@@ -31,6 +31,7 @@ Forwards/Backwards Animation:
 Questions: Do i have to do soemthing with webkit?
 
 Things to try next time:
+- ! Draw a diagram of app before starting
 - How to name colors?
 - CSS Modules
 - SCSS: Has Math Functions

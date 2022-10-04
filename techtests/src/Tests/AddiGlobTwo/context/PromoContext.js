@@ -21,6 +21,8 @@ export function PromoProvider({ children }) {
 
       rootstyle.setProperty("--menu", "rgb(8, 54, 64)");
       rootstyle.setProperty("--menu-text", "rgb(69, 209, 202)");
+
+      rootstyle.setProperty("--skele", "rgb(184, 221, 219)");
     } else {
       // false = dark
       rootstyle.setProperty("--primary", "rgb(8, 54, 64)");
@@ -34,6 +36,8 @@ export function PromoProvider({ children }) {
 
       rootstyle.setProperty("--menu", "rgb(8, 27, 32)");
       rootstyle.setProperty("--menu-text", "rgb(69, 209, 202)");
+
+      rootstyle.setProperty("--skele", "rgb(15, 44, 52)");
     }
   }, [theme]);
 
