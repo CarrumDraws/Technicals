@@ -15,10 +15,10 @@ function Article({ promo }) {
 
   return (
     <article className="article_flexbox">
-      <div className="article_name">{name}</div>
+      <h1 className="article_name">{name}</h1>
 
       <img src={heroImageUrl} alt="Promo Hero"></img>
-      <div className="article_description">{description}</div>
+      <p className="article_description">{description}</p>
 
       <div className="article_flexbox_buttons">
         <button className="article_toc" onClick={() => clicked("toc")}>

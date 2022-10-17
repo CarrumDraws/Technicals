@@ -17,7 +17,7 @@ function Main() {
     async function getData() {
       try {
         const response = await fetch(
-          "http://www.mocky[fail].io/v2/5bc3b9cc30000012007586b7"
+          "http://www.mocky.io/v2/5bc3b9cc30000012007586b7"
         );
         const promoData = await response.json();
         // Sort promoData by sequence

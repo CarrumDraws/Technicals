@@ -1,0 +1,16 @@
+Experiment B has a Mover div track the position of the mouse, from anywhere on the screen.
+
+Transforms are relative to the original position
+i.e. Transforming Mover 50px and then transforming Mover 0px puts Mover back in its og position.
+
+Solution: I need to reference the OG position of the element when making transforms, NOT the transformed position. 
+Use an Anchor element: A duplicate 'ghost' of the Mover, that doesn't move, to decide our transforms.
+
+How to trigger moveEle on scroll? 
+Solution: Save the previous clientY from mousemove, and input it into scroll.
+
+How to get smooth laggy following? 
+Solution(?): Adding a transition-duration works as long as console is closed.
+
+ISSUES --
+- How to deal wiht touch devices?

@@ -1,0 +1,22 @@
+
+Create...
+
+A. Element that tracks mouse position (B)
+
+B. Element that (when clicked) jumps to position of 2 other Elements (A)
+    - Tracks even if elements move
+
+C. Element (when clicked) locks to center of viewport
+    -  Tracks viewport (Like Sticky) regardless of scroll position
+
+D. Element (when clicked) locks to center of viewport and expands to fit
+
+E. Make-Way Grid that enables Element Reordering
+
+F. Dynamic Carusel of Elements
+    - When no element selected, elements float around
+    - When element selected, element resizes + locks to viewport
+    - Other elements follow a non-linear path
+    - Can be scrolled through
+
+

@@ -1,0 +1,38 @@
+.root {
+  position: absolute;
+}
+
+.boxA {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 0, 0, 1);
+  opacity: 100%;
+
+  transform: translate(100px, -50px);
+}
+.Aghost {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+.Ainfo {
+  height: 1rem;
+  background-color: pink;
+}
+.Binfo {
+  height: 1rem;
+  background-color: lightblue;
+}
+
+.boxB {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 0, 255, 1);
+
+  transition: all 1s ease-in-out;
+}
+.Bghost {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+.buffer {
+  width: 150px;
+  height: 300px;
+}

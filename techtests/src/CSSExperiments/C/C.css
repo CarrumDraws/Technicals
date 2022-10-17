@@ -1,0 +1,22 @@
+.boxA {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 0, 0, 1);
+  opacity: 100%;
+  transition: 0.4s ease-in-out;
+}
+/* #A {
+  width: 200px;
+  height: 200px;
+} */
+.Aghost {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+.Opened {
+  width: 80vw;
+  height: 80vh;
+}
+.buffer {
+  width: 150px;
+  height: 300px;
+}

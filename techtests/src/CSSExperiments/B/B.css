@@ -1,0 +1,14 @@
+.boxA {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 0, 0, 1);
+  opacity: 100%;
+  transition: 0.3s ease-out;
+}
+.Aghost {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+.buffer {
+  width: 150px;
+  height: 300px;
+}

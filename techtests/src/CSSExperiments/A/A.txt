@@ -1,0 +1,15 @@
+Experiment A translates a Mover Element to the position of a Target Element ONCE.
+
+getClientBoundingRect() works on translated elements, meaning...
+    - If target is translated, it is still a valid target
+    - Mover DOESN'T work multiple times, as there is no Anchor 
+
+You should track when...
+    - Window Resized
+    - Location of Mover or Target changes
+
+Things I'd Like --
+1. Laggy Tracking: Track Slower (Done!)
+2. Bouncy Tracking: Track bounces when moved
+
+ISSUES -- Track only works once, since there is no Anchor element

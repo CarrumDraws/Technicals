@@ -1,0 +1,20 @@
+Experiment C has a div track the position of the screen when clicked- essentially making the div sticky and centered.
+
+Similar to Experiment B- Differences being the scrollevent is conditional and the size of the Mover changes when active.
+
+Conditional ScrollEvent :
+Listener only has access to initial state.
+To solve this, use Refs (bruh huh?)
+https://medium.com/geographit/accessing-react-state-in-event-listeners-with-usestate-and-useref-hooks-8cceee73c559
+
+
+Resizing Mover :
+'mover.scrollHeight/2' won't work- the values are read before the styles are applied.
+You'll have to manually move the element to the position you want it to take.
+Our new height is 80vh. We want our mover.scrollHeight/2 to be 40vh. Therefore, replace mover.scrollHeight/2 with window.innerHeight*0.4.
+
+
+On click element again, it goes back to its OG size. How to remove style...?
+
+
+Notes: When elements get bigger, their right and bottom coords expand. 
